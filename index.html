@@ -98,14 +98,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* Mobile Menu */
-        #mobile-menu {
-            transform: translateY(-100%);
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        #mobile-menu.active {
-            transform: translateY(0);
-        }
         /* Testimonial Marquee Animation */
         @keyframes marquee {
             0% { transform: translateX(0); }
@@ -123,104 +115,54 @@
         h1, h2, h3, h4, h5, h6, .text-heading-1, .text-heading-2, .text-heading-3 {
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
-        @media (max-width: 640px) {
-            .marquee-track {
-                animation-duration: 20s;
-            }
-        }
     </style>
 </head>
 <body class="bg-slate-200 text-slate-900 overflow-x-hidden font-sans">
     <div class="max-w-[1280px] mx-auto bg-surface shadow-2xl relative min-h-screen">
         <!-- Navigation -->
         <header class="sticky top-0 w-full z-50 glass-header">
-            <nav class="container mx-auto px-6 py-4 flex items-center">
-                <!-- Logo Group -->
-                <div class="flex-1 flex items-center">
-                    <div class="flex items-center text-2xl font-bold tracking-tight text-primary">
-                        <span class="text-brand">SET</span>KORP
-                    </div>
-                </div>
-                
-                <!-- Navigation Links - Centered -->
-                <div class="hidden lg:flex items-center gap-8 text-sm font-medium">
-                    <a href="#industries" class="hover:text-brand transition-colors">Industries</a>
-                    <a href="#services" class="hover:text-brand transition-colors">Services</a>
-                    <a href="#how-it-works" class="hover:text-brand transition-colors">How It Works</a>
-                    <a href="#faq" class="hover:text-brand transition-colors">FAQs</a>
-                </div>
-
-                <!-- Actions Group -->
-                <div class="flex-1 flex items-center justify-end gap-4">
-                    <a href="#contact" class="hidden sm:flex bg-gradient-to-r from-brand to-brandhover text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:shadow-xl transition-all shadow-lg shadow-brand/20">
-                        Book Strategy Call
-                    </a>
-                    <!-- Mobile Menu Button -->
-                    <button id="menu-toggle" class="lg:hidden p-2 text-primary hover:text-brand transition-colors">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
-                    </button>
-                </div>
-            </nav>
-
-            <!-- Mobile Menu Dropdown -->
-            <div id="mobile-menu" class="fixed top-0 left-0 right-0 w-full bg-white shadow-2xl z-[60] lg:hidden flex flex-col p-8 pt-24">
-                <div class="flex justify-between items-center mb-12">
-                    <div class="text-xl font-bold tracking-tight text-primary">
-                        <span class="text-brand">SET</span>KORP
-                    </div>
-                    <button id="menu-close" class="p-2 text-slate-400 hover:text-brand">
-                        <i data-lucide="x" class="w-6 h-6"></i>
-                    </button>
-                </div>
-                
-                <div class="flex flex-col gap-6 text-lg font-semibold text-slate-700">
-                    <a href="#industries" class="mobile-link py-2 border-b border-slate-50">Industries</a>
-                    <a href="#services" class="mobile-link py-2 border-b border-slate-50">Services</a>
-                    <a href="#how-it-works" class="mobile-link py-2 border-b border-slate-50">How It Works</a>
-                    <a href="#faq" class="mobile-link py-2 border-b border-slate-50">FAQs</a>
-                </div>
-
-                <div class="mt-auto pt-8">
-                    <a href="#contact" class="w-full inline-block text-center bg-brand text-white py-4 rounded-xl font-bold shadow-lg shadow-brand/20">Book Call</a>
-                    <div class="mt-6 flex justify-center gap-6">
-                        <i data-lucide="linkedin" class="w-5 h-5 text-slate-400"></i>
-                        <i data-lucide="twitter" class="w-5 h-5 text-slate-400"></i>
-                    </div>
-                </div>
+            <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center text-2xl font-bold tracking-tight text-primary">
+                <span class="text-brand">SET</span>KORP
             </div>
-            <!-- Overlay -->
-            <div id="menu-overlay" class="fixed inset-0 bg-black/20 backdrop-blur-sm z-[55] hidden lg:hidden"></div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#services" class="hover:text-brand transition-colors">Services</a>
+                <a href="#expertise" class="hover:text-brand transition-colors">Expertise</a>
+                <a href="#how-it-works" class="hover:text-brand transition-colors">Process</a>
+                <a href="#faq" class="hover:text-brand transition-colors">FAQ</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="tel:+123456789" class="hidden sm:flex text-sm font-semibold hover:text-brand">
+                    <i data-lucide="phone" class="w-4 h-4 mr-2"></i> Support
+                </a>
+                <a href="#contact" class="bg-gradient-to-r from-brand to-brandhover text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:shadow-xl transition-all shadow-lg shadow-brand/20">
+                    Book Strategy Call
+                </a>
+            </div>
+        </nav>
     </header>
 
     <main>
         <!-- Hero Section with Video Background -->
         <section class="relative h-screen overflow-hidden -mt-16 md:-mt-20">
             <!-- Video Background -->
-            <div class="absolute inset-0 px-6 md:px-0">
-                <video autoplay muted loop playsinline class="w-full h-full object-contain object-center rounded-2xl md:rounded-none" style="background-color: #FDFDFD;">
-                    <source src="hero-section-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-contain object-top" style="background-color: #FDFDFD;">
+                <source src="hero-section-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             
             <!-- Content Container - Buttons Only -->
-            <div class="relative h-full flex items-end justify-center pb-16 md:pb-8">
+            <div class="relative h-full flex items-end justify-center pb-4 md:pb-8">
                 <div class="container mx-auto px-6">
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
-                        <!-- Primary CTA -->
-                        <a href="#contact" class="group w-full sm:w-auto bg-gradient-to-r from-brand to-brandhover text-white px-8 md:px-10 py-5 rounded-xl text-base md:text-lg font-black transition-all duration-300 shadow-[0_20px_40px_-12px_rgba(227,88,77,0.4)] hover:shadow-[0_30px_60px_-12px_rgba(227,88,77,0.5)] hover:-translate-y-1 ring-1 ring-white/20 ring-inset flex items-center justify-center relative overflow-hidden">
-                            <span class="relative z-10 flex items-center">
-                                Book Your Free Strategy Call
-                                <i data-lucide="arrow-right" class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
-                            </span>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="#contact" class="w-full sm:w-auto bg-gradient-to-r from-brand to-brandhover text-white px-8 py-4 rounded-lg text-lg font-bold hover:shadow-2xl transition-all shadow-xl shadow-brand/30 flex items-center justify-center">
+                            Book Your Free Strategy Call
+                            <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
                         </a>
-                        
-                        <!-- Secondary CTA -->
-                        <a href="#calculator" class="group w-full sm:w-auto bg-white/90 backdrop-blur-md text-primary border border-slate-200 px-8 md:px-10 py-5 rounded-xl text-base md:text-lg font-bold hover:bg-white hover:-translate-y-1 transition-all duration-300 flex items-center justify-center shadow-lg">
-                            <span class="flex items-center">
-                                <div class="w-2 h-2 bg-brand rounded-full mr-3 animate-pulse"></div>
-                                Setup Cost Calculator
-                            </span>
+                        <a href="#calculator" class="w-full sm:w-auto bg-white text-primary border-2 border-brand px-8 py-4 rounded-lg text-lg font-bold hover:bg-red-50 transition-all flex items-center justify-center">
+                            Calculate Setup Costs Now
                         </a>
                     </div>
                 </div>
@@ -228,14 +170,14 @@
         </section>
 
         <!-- Welcome Section -->
-        <section id="industries" class="py-12 md:py-24 bg-surface">
+        <section class="py-lg bg-surface">
             <div class="container mx-auto">
                 <div class="max-w-6xl mx-auto">
                     <!-- Welcome Header -->
-                    <div class="mb-12 md:mb-20 text-center md:text-left">
-                        <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6">Welcome to <span class="text-brand">Setkorp</span></h2>
-                        <h3 class="text-xl md:text-3xl font-bold text-slate-700 mb-6">Your Gateway to Seamless Business Setup in Dubai</h3>
-                        <p class="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto md:mx-0 leading-relaxed">
+                    <div class="mb-xl">
+                        <h2 class="text-heading-1 text-primary mb-md">Welcome to <span class="text-brand">Setkorp</span></h2>
+                        <h3 class="text-heading-2 text-slate-700 mb-md">Your Gateway to Seamless Business Setup in Dubai</h3>
+                        <p class="text-lead text-slate-600 max-w-4xl">
                             Setkorp delivers end-to-end business setup solutions with transparency and efficiency—from free zone to mainland formations—all through one reliable portal for your business needs.
                         </p>
                     </div>
@@ -293,42 +235,30 @@
             </div>
         </section>
 
-        <!-- Social Proof Bar: Institutional Partnerships -->
-        <section class="py-12 bg-surface border-y border-slate-100 overflow-hidden relative">
-            <div class="container mx-auto px-6">
-                <p class="text-center text-xs md:text-sm font-bold text-slate-400 uppercase tracking-[0.3em] mb-10">Institutional Partnership Network</p>
+        <!-- Social Proof Bar -->
+        <section class="py-lg bg-surface border-y border-slate-100">
+            <div class="container mx-auto">
+                <p class="text-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-10">Trusted by Global Industry Leaders</p>
                 
-                <div class="relative group">
-                    <!-- Subtle Gradient Masks -->
-                    <div class="absolute inset-y-0 left-0 w-24 md:w-40 bg-gradient-to-r from-surface to-transparent z-10 pointer-events-none"></div>
-                    <div class="absolute inset-y-0 right-0 w-24 md:w-40 bg-gradient-to-l from-surface to-transparent z-10 pointer-events-none"></div>
-                    
-                    <div class="flex overflow-hidden">
-                        <div class="marquee-track flex items-center flex-nowrap">
-                            <!-- Logo Set 1 -->
-                            <div class="flex items-center gap-16 md:gap-32 px-8 md:px-16 flex-shrink-0">
-                                <img src="images/MFZ-logo-01-1536x1086-1-300x212.webp" alt="MFZ" class="h-10 md:h-12 w-auto object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                                <img src="images/Noor-Ride-Transparent-01-300x225.png" alt="Noor Ride" class="h-10 md:h-12 w-auto object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                                <img src="images/WhatsApp_Image_2023-12-27_at_12.56.51_e9e64087-removebg-preview-300x78.png" alt="Policy Bazaar" class="h-10 md:h-12 w-auto object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                                <img src="images/SAAL-Consulting-details.jpeg-150x150.jpg" alt="SAAL" class="h-10 md:h-12 w-auto rounded-full object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                                <img src="images/juggernot-1-300x300.jpg" alt="Juggernot" class="h-10 md:h-12 w-auto rounded-lg object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                                <img src="images/2.webp" alt="Meydan" class="h-10 md:h-12 w-auto object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                                <img src="images/3.webp" alt="Partner 3" class="h-10 md:h-12 w-auto object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                                <img src="images/4.webp" alt="Partner 4" class="h-10 md:h-12 w-auto object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                                <img src="images/6.webp" alt="Partner 6" class="h-10 md:h-12 w-auto object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                            </div>
-                            <!-- Duplicated for loop -->
-                            <div class="flex items-center gap-16 md:gap-32 px-8 md:px-16 flex-shrink-0">
-                                <img src="images/MFZ-logo-01-1536x1086-1-300x212.webp" alt="MFZ" class="h-10 md:h-12 w-auto object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                                <img src="images/Noor-Ride-Transparent-01-300x225.png" alt="Noor Ride" class="h-10 md:h-12 w-auto object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                                <img src="images/WhatsApp_Image_2023-12-27_at_12.56.51_e9e64087-removebg-preview-300x78.png" alt="Policy Bazaar" class="h-10 md:h-12 w-auto object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                                <img src="images/SAAL-Consulting-details.jpeg-150x150.jpg" alt="SAAL" class="h-10 md:h-12 w-auto rounded-full object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                                <img src="images/juggernot-1-300x300.jpg" alt="Juggernot" class="h-10 md:h-12 w-auto rounded-lg object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                                <img src="images/2.webp" alt="Meydan" class="h-10 md:h-12 w-auto object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                                <img src="images/3.webp" alt="Partner 3" class="h-10 md:h-12 w-auto object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                                <img src="images/4.webp" alt="Partner 4" class="h-10 md:h-12 w-auto object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                                <img src="images/6.webp" alt="Partner 6" class="h-10 md:h-12 w-auto object-contain flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-500 opacity-40 hover:opacity-100 hover:scale-110">
-                            </div>
+                <div class="relative overflow-hidden">
+                    <!-- Subtle edge masks -->
+                    <div class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-surface to-transparent z-10"></div>
+                    <div class="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-surface to-transparent z-10"></div>
+
+                    <div class="marquee-track" style="animation-duration: 30s;">
+                        <!-- Logo Set 1 -->
+                        <div class="flex items-center gap-12 md:gap-24 opacity-60 grayscale">
+                            <div class="flex items-center gap-2 font-bold text-xl whitespace-nowrap"><i data-lucide="shield-check"></i> TECHCORE</div>
+                            <div class="flex items-center gap-2 font-bold text-xl whitespace-nowrap"><i data-lucide="zap"></i> ENERGY PLUS</div>
+                            <div class="flex items-center gap-2 font-bold text-xl whitespace-nowrap"><i data-lucide="briefcase"></i> GLOBAL ADVISORS</div>
+                            <div class="flex items-center gap-2 font-bold text-xl whitespace-nowrap"><i data-lucide="cpu"></i> SMART ASSETS</div>
+                        </div>
+                        <!-- Logo Set 2 (Duplicated for loop) -->
+                        <div class="flex items-center gap-12 md:gap-24 opacity-60 grayscale">
+                            <div class="flex items-center gap-2 font-bold text-xl whitespace-nowrap"><i data-lucide="shield-check"></i> TECHCORE</div>
+                            <div class="flex items-center gap-2 font-bold text-xl whitespace-nowrap"><i data-lucide="zap"></i> ENERGY PLUS</div>
+                            <div class="flex items-center gap-2 font-bold text-xl whitespace-nowrap"><i data-lucide="briefcase"></i> GLOBAL ADVISORS</div>
+                            <div class="flex items-center gap-2 font-bold text-xl whitespace-nowrap"><i data-lucide="cpu"></i> SMART ASSETS</div>
                         </div>
                     </div>
                 </div>
@@ -336,14 +266,14 @@
         </section>
 
         <!-- Problem / Solution Section -->
-        <section class="py-12 md:py-24 bg-slate-50">
-            <div class="container mx-auto px-6 md:px-20">
-                <div class="text-center mb-12 md:mb-20">
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6 leading-tight">Setting Up in <span class="text-brand">Dubai</span> Shouldn't Feel Like Navigating a Maze</h2>
-                    <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">Stop wasting time with bureaucratic hurdles. Here's how Setkorp changes the equation.</p>
+        <section class="py-lg bg-slate-50">
+            <div class="container mx-auto px-8 md:px-20">
+                <div class="text-center mb-xl">
+                    <h2 class="text-heading-1 text-primary mb-md">Setting Up in <span class="text-brand">Dubai</span> Shouldn't Feel Like Navigating a Maze</h2>
+                    <p class="text-lead text-slate-600 max-w-2xl mx-auto">Stop wasting time with bureaucratic hurdles. Here's how Setkorp changes the equation.</p>
                 </div>
                 
-                <div class="grid lg:grid-cols-2 gap-8 md:gap-12 group">
+                <div class="grid md:grid-cols-2 gap-8">
                     <!-- Without Setkorp -->
                     <div class="bg-white p-8 md:p-12 rounded-lg border border-red-100">
                         <div class="flex items-center gap-3 mb-8">
@@ -404,14 +334,14 @@
         </section>
 
         <!-- Value Propositions -->
-        <section class="py-12 md:py-24 bg-gradient-to-br from-orange-50 via-red-50 to-amber-50">
-            <div class="container mx-auto px-6">
-                <div class="max-w-3xl mx-auto text-center mb-12 md:mb-20">
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6">Where Challenges Meet Their Best <span class="text-brand">Solutions</span></h2>
-                    <p class="text-lg md:text-xl text-slate-600">Setkorp isn't just a setup service. We're your prosperity partners, transforming business goals into accomplished milestones.</p>
+        <section class="py-lg bg-gradient-to-br from-orange-50 via-red-50 to-amber-50">
+            <div class="container mx-auto">
+                <div class="max-w-3xl mx-auto text-center mb-20">
+                    <h2 class="text-3xl md:text-5xl font-bold text-primary mb-6">Where Challenges Meet Their Best <span class="text-brand">Solutions</span></h2>
+                    <p class="text-xl text-slate-600">Setkorp isn't just a setup service. We're your prosperity partners, transforming business goals into accomplished milestones.</p>
                 </div>
 
-                <div class="max-w-6xl mx-auto grid sm:grid-cols-2 gap-6 md:gap-8">
+                <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
                     <!-- Card 1 -->
                     <div class="group p-10 bg-white rounded-lg border border-red-100 hover:border-brand hover:shadow-xl transition-all duration-300">
                         <div class="flex items-start gap-6">
@@ -468,69 +398,72 @@
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="relative bg-slate-50 overflow-visible py-12 md:py-24">
+        <section id="services" class="relative bg-slate-50 overflow-visible py-lg">
             <!-- Header Section -->
-            <div class="container mx-auto mb-12 md:mb-20 text-center">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-bold mb-6">
+            <div class="container mx-auto mb-lg text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-bold mb-md">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
                     <span class="text-xs tracking-wider uppercase">Complete Solutions</span>
                 </div>
-                <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6">Services Beyond <span class="text-brand">Expectations</span></h2>
-                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">Transform your business vision into reality with seamlessly integrated solutions. We design and operate a unified business setup system where every component feeds the next.</p>
+                <h2 class="text-heading-1 text-primary mb-md">Services Beyond <span class="text-brand">Expectations</span></h2>
+                <p class="text-lead text-slate-600 max-w-3xl mx-auto">Transform your business vision into reality with seamlessly integrated solutions. We design and operate a unified business setup system where every component feeds the next.</p>
             </div>
 
             <!-- Sticky Stacking Cards Container -->
-            <div class="relative space-y-8 md:space-y-0">
+            <div class="relative">
                 <!-- Card 1: Business Incorporation -->
-                <div class="md:sticky top-12 md:top-20 md:h-[90vh] container mx-auto px-4 md:px-20 flex items-center justify-center" style="z-index: 1">
-                    <div class="w-full max-w-7xl md:h-[70vh] bg-white border border-slate-200 rounded-2xl md:rounded-lg overflow-hidden grid md:grid-cols-2 shadow-xl md:shadow-2xl">
+                <div class="sticky top-0 h-[90vh] container mx-auto px-8 md:px-20 flex items-center justify-center" style="z-index: 1">
+                    <div class="w-full max-w-7xl h-[90vh] md:h-[70vh] bg-white border border-slate-200 rounded-lg overflow-hidden grid md:grid-cols-2 shadow-2xl">
                         <!-- LEFT SIDE: CONTENT -->
                         <div class="p-8 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 relative bg-gradient-to-br from-brand/5 to-transparent">
+                            
+                            
                             <div class="relative z-10">
-                                <div class="inline-flex items-center px-3 py-1 rounded-full bg-brand/10 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-6 border border-brand/10">
+                                <div class="inline-flex items-center px-3 py-1 rounded-full bg-brand/10 text-brand text-[10px] font-bold uppercase tracking-[0.2em] mb-4 md:mb-6 border border-brand/10">
                                     SERVICE 01
                                 </div>
-                                <h3 class="text-2xl md:text-4xl font-bold text-primary mb-6">
+                                <h3 class="text-heading-2 text-primary mb-md">
                                     Business Incorporation & Licensing
                                 </h3>
-                                <p class="text-base md:text-lg text-slate-600 mb-8 max-w-md">
-                                    Freezone vs. mainland analysis, license application, visa allocation planning, and legal documentation.
+                                <p class="text-lead text-slate-600 mb-lg max-w-md">
+                                    Freezone vs. mainland analysis, license application, visa allocation planning, and legal documentation (MOA).
                                 </p>
                                 
-                                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-3 md:gap-4">
+                                <div class="space-y-3 md:space-y-4">
                                     <div class="flex items-center gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-brand"></div>
-                                        <span class="text-sm text-slate-700">Legal navigation</span>
+                                        <div class="w-1 h-1 rounded-full bg-brand"></div>
+                                        <span class="text-xs md:text-sm text-slate-700">Legal required navigation</span>
                                     </div>
                                     <div class="flex items-center gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-brand"></div>
-                                        <span class="text-sm text-slate-700">Government approvals</span>
+                                        <div class="w-1 h-1 rounded-full bg-brand"></div>
+                                        <span class="text-xs md:text-sm text-slate-700">Government approvals</span>
                                     </div>
                                     <div class="flex items-center gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-brand"></div>
-                                        <span class="text-sm text-slate-700">Visa planning</span>
+                                        <div class="w-1 h-1 rounded-full bg-brand"></div>
+                                        <span class="text-xs md:text-sm text-slate-700">Visa allocation planning</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- RIGHT SIDE: IMAGE/GRAPHIC -->
-                        <div class="bg-gradient-to-br from-brand/10 to-slate-50 p-8 md:p-10 flex items-center justify-center relative overflow-hidden hidden sm:flex">
+                        <!-- RIGHT SIDE: IMAGE -->
+                        <div class="bg-gradient-to-br from-brand/10 to-slate-50 p-4 md:p-10 flex items-center justify-center relative overflow-hidden">
                             <div class="w-full h-full flex items-center justify-center">
-                                <div class="relative w-full h-full max-w-lg bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center justify-center border border-brand/20">
-                                    <div class="w-24 h-24 md:w-32 md:h-32 bg-brand/10 rounded-full flex items-center justify-center mb-6">
-                                        <i data-lucide="building-2" class="w-12 h-12 md:w-16 md:h-16 text-brand"></i>
+                                <!-- Image Placeholder - Replace src with actual image -->
+                                <div class="relative w-full h-full max-w-lg max-h-96 bg-white rounded-lg shadow-lg p-8 flex flex-col items-center justify-center border border-brand/20">
+                                    <div class="w-32 h-32 bg-brand/10 rounded-full flex items-center justify-center mb-6">
+                                        <i data-lucide="building-2" class="w-16 h-16 text-brand"></i>
                                     </div>
-                                    <h4 class="text-xl font-bold text-slate-900 mb-2 text-center">Business Setup</h4>
-                                    <p class="text-xs md:text-sm text-slate-600 text-center mb-6">Mainland & Freezone Experts</p>
-                                    <div class="flex flex-wrap justify-center gap-2 md:gap-3">
-                                        <div class="px-3 md:px-4 py-2 bg-brand/10 rounded-lg flex items-center">
-                                            <i data-lucide="check-circle" class="w-4 h-4 text-brand mr-2"></i>
-                                            <span class="text-[10px] md:text-xs font-semibold text-slate-700">Licensed</span>
+                                    <h4 class="text-xl font-bold text-slate-900 mb-3 text-center">Business Setup</h4>
+                                    <p class="text-sm text-slate-600 text-center mb-6">Freezone & Mainland Company Formation</p>
+                                    <div class="flex gap-3">
+                                        <div class="px-4 py-2 bg-brand/10 rounded-lg">
+                                            <i data-lucide="check-circle" class="w-5 h-5 text-brand inline mr-2"></i>
+                                            <span class="text-xs font-semibold text-slate-700">Licensed</span>
                                         </div>
-                                        <div class="px-3 md:px-4 py-2 bg-brand/10 rounded-lg flex items-center">
-                                            <i data-lucide="shield-check" class="w-4 h-4 text-brand mr-2"></i>
-                                            <span class="text-[10px] md:text-xs font-semibold text-slate-700">Compliant</span>
+                                        <div class="px-4 py-2 bg-brand/10 rounded-lg">
+                                            <i data-lucide="shield-check" class="w-5 h-5 text-brand inline mr-2"></i>
+                                            <span class="text-xs font-semibold text-slate-700">Compliant</span>
                                         </div>
                                     </div>
                                 </div>
@@ -540,55 +473,58 @@
                 </div>
 
                 <!-- Card 2: Corporate Banking -->
-                <div class="md:sticky top-12 md:top-20 md:h-[90vh] container mx-auto px-4 md:px-20 flex items-center justify-center" style="z-index: 2">
-                    <div class="w-full max-w-7xl md:h-[70vh] bg-white border border-slate-200 rounded-2xl md:rounded-lg overflow-hidden grid md:grid-cols-2 shadow-xl md:shadow-2xl">
+                <div class="sticky top-0 h-[90vh] container mx-auto px-8 md:px-20 flex items-center justify-center" style="z-index: 2">
+                    <div class="w-full max-w-7xl h-[90vh] md:h-[70vh] bg-white border border-slate-200 rounded-lg overflow-hidden grid md:grid-cols-2 shadow-2xl">
                         <!-- LEFT SIDE: CONTENT -->
                         <div class="p-8 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 relative bg-gradient-to-br from-gold/5 to-transparent">
+                            
+                            
                             <div class="relative z-10">
-                                <div class="inline-flex items-center px-3 py-1 rounded-full bg-gold/10 text-gold text-[10px] font-bold uppercase tracking-[0.2em] mb-6 border border-gold/10">
+                                <div class="inline-flex items-center px-3 py-1 rounded-full bg-gold/10 text-gold text-[10px] font-bold uppercase tracking-[0.2em] mb-4 md:mb-6 border border-gold/10">
                                     SERVICE 02
                                 </div>
-                                <h3 class="text-2xl md:text-4xl font-bold text-primary mb-6">
+                                <h3 class="text-heading-2 text-primary mb-md">
                                     Corporate Banking Made Simple
                                 </h3>
-                                <p class="text-base md:text-lg text-slate-600 mb-8 max-w-md">
+                                <p class="text-lead text-slate-600 mb-lg max-w-md">
                                     Securing corporate accounts within 7 business days through our elite UAE banking relationships.
                                 </p>
                                 
-                                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-3 md:gap-4">
+                                <div class="space-y-3 md:space-y-4">
                                     <div class="flex items-center gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-gold"></div>
-                                        <span class="text-sm text-slate-700">Application support</span>
+                                        <div class="w-1 h-1 rounded-full bg-gold"></div>
+                                        <span class="text-xs md:text-sm text-slate-700">Application support</span>
                                     </div>
                                     <div class="flex items-center gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-gold"></div>
-                                        <span class="text-sm text-slate-700">Multi-currency accounts</span>
+                                        <div class="w-1 h-1 rounded-full bg-gold"></div>
+                                        <span class="text-xs md:text-sm text-slate-700">Multi-currency accounts</span>
                                     </div>
                                     <div class="flex items-center gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-gold"></div>
-                                        <span class="text-sm text-slate-700">Elite partnerships</span>
+                                        <div class="w-1 h-1 rounded-full bg-gold"></div>
+                                        <span class="text-xs md:text-sm text-slate-700">Elite banking partnerships</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- RIGHT SIDE: GRAPHIC -->
-                        <div class="bg-gradient-to-br from-gold/10 to-slate-50 p-8 md:p-10 flex items-center justify-center relative overflow-hidden hidden sm:flex">
+                        <!-- RIGHT SIDE: IMAGE -->
+                        <div class="bg-gradient-to-br from-gold/10 to-slate-50 p-4 md:p-10 flex items-center justify-center relative overflow-hidden">
                             <div class="w-full h-full flex items-center justify-center">
-                                <div class="relative w-full h-full max-w-lg bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center justify-center border border-gold/20">
-                                    <div class="w-24 h-24 md:w-32 md:h-32 bg-gold/10 rounded-full flex items-center justify-center mb-6">
-                                        <i data-lucide="landmark" class="w-12 h-12 md:w-16 md:h-16 text-gold"></i>
+                                <!-- Image Placeholder - Replace src with actual image -->
+                                <div class="relative w-full h-full max-w-lg max-h-96 bg-white rounded-lg shadow-lg p-8 flex flex-col items-center justify-center border border-gold/20">
+                                    <div class="w-32 h-32 bg-gold/10 rounded-full flex items-center justify-center mb-6">
+                                        <i data-lucide="landmark" class="w-16 h-16 text-gold"></i>
                                     </div>
-                                    <h4 class="text-xl font-bold text-slate-900 mb-2 text-center">Corporate Banking</h4>
-                                    <p class="text-xs md:text-sm text-slate-600 text-center mb-6">UAE's Premier Banking Liaison</p>
-                                    <div class="flex flex-wrap justify-center gap-2 md:gap-3">
-                                        <div class="px-3 md:px-4 py-2 bg-gold/10 rounded-lg flex items-center">
-                                            <i data-lucide="credit-card" class="w-4 h-4 text-gold mr-2"></i>
-                                            <span class="text-[10px] md:text-xs font-semibold text-slate-700">Multi-Currency</span>
+                                    <h4 class="text-xl font-bold text-slate-900 mb-3 text-center">Corporate Banking</h4>
+                                    <p class="text-sm text-slate-600 text-center mb-6">Fast-Track Account Opening in 7 Days</p>
+                                    <div class="flex gap-3">
+                                        <div class="px-4 py-2 bg-gold/10 rounded-lg">
+                                            <i data-lucide="credit-card" class="w-5 h-5 text-gold inline mr-2"></i>
+                                            <span class="text-xs font-semibold text-slate-700">Multi-Currency</span>
                                         </div>
-                                        <div class="px-3 md:px-4 py-2 bg-gold/10 rounded-lg flex items-center">
-                                            <i data-lucide="globe" class="w-4 h-4 text-gold mr-2"></i>
-                                            <span class="text-[10px] md:text-xs font-semibold text-slate-700">Global Access</span>
+                                        <div class="px-4 py-2 bg-gold/10 rounded-lg">
+                                            <i data-lucide="globe" class="w-5 h-5 text-gold inline mr-2"></i>
+                                            <span class="text-xs font-semibold text-slate-700">Global Access</span>
                                         </div>
                                     </div>
                                 </div>
@@ -598,55 +534,58 @@
                 </div>
 
                 <!-- Card 3: Office Spaces -->
-                <div class="md:sticky top-12 md:top-20 md:h-[90vh] container mx-auto px-4 md:px-20 flex items-center justify-center" style="z-index: 3">
-                    <div class="w-full max-w-7xl md:h-[70vh] bg-white border border-slate-200 rounded-2xl md:rounded-lg overflow-hidden grid md:grid-cols-2 shadow-xl md:shadow-2xl">
+                <div class="sticky top-0 h-[90vh] container mx-auto px-8 md:px-20 flex items-center justify-center" style="z-index: 3">
+                    <div class="w-full max-w-7xl h-[90vh] md:h-[70vh] bg-white border border-slate-200 rounded-lg overflow-hidden grid md:grid-cols-2 shadow-2xl">
                         <!-- LEFT SIDE: CONTENT -->
                         <div class="p-8 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 relative bg-gradient-to-br from-success/5 to-transparent">
+                            
+                            
                             <div class="relative z-10">
-                                <div class="inline-flex items-center px-3 py-1 rounded-full bg-success/10 text-success text-[10px] font-bold uppercase tracking-[0.2em] mb-6 border border-success/10">
+                                <div class="inline-flex items-center px-3 py-1 rounded-full bg-success/10 text-success text-[10px] font-bold uppercase tracking-[0.2em] mb-4 md:mb-6 border border-success/10">
                                     SERVICE 03
                                 </div>
-                                <h3 class="text-2xl md:text-4xl font-bold text-primary mb-6">
+                                <h3 class="text-heading-2 text-primary mb-md">
                                     Office Spaces & Corporate Real Estate
                                 </h3>
-                                <p class="text-base md:text-lg text-slate-600 mb-8 max-w-md">
+                                <p class="text-lead text-slate-600 mb-lg max-w-md">
                                     From flexi-desks to executive suites, we connect you with vetted agents and negotiate best terms.
                                 </p>
                                 
-                                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-3 md:gap-4">
+                                <div class="space-y-3 md:space-y-4">
                                     <div class="flex items-center gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-success"></div>
-                                        <span class="text-sm text-slate-700">Office sourcing</span>
+                                        <div class="w-1 h-1 rounded-full bg-success"></div>
+                                        <span class="text-xs md:text-sm text-slate-700">Office sourcing</span>
                                     </div>
                                     <div class="flex items-center gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-success"></div>
-                                        <span class="text-sm text-slate-700">Ejari registration</span>
+                                        <div class="w-1 h-1 rounded-full bg-success"></div>
+                                        <span class="text-xs md:text-sm text-slate-700">Ejari registration</span>
                                     </div>
                                     <div class="flex items-center gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-success"></div>
-                                        <span class="text-sm text-slate-700">Vetted agent network</span>
+                                        <div class="w-1 h-1 rounded-full bg-success"></div>
+                                        <span class="text-xs md:text-sm text-slate-700">Vetted agent network</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- RIGHT SIDE: GRAPHIC -->
-                        <div class="bg-gradient-to-br from-success/10 to-slate-50 p-8 md:p-10 flex items-center justify-center relative overflow-hidden hidden sm:flex">
+                        <!-- RIGHT SIDE: IMAGE -->
+                        <div class="bg-gradient-to-br from-success/10 to-slate-50 p-4 md:p-10 flex items-center justify-center relative overflow-hidden">
                             <div class="w-full h-full flex items-center justify-center">
-                                <div class="relative w-full h-full max-w-lg bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center justify-center border border-success/20">
-                                    <div class="w-24 h-24 md:w-32 md:h-32 bg-success/10 rounded-full flex items-center justify-center mb-6">
-                                        <i data-lucide="building" class="w-12 h-12 md:w-16 md:h-16 text-success"></i>
+                                <!-- Image Placeholder - Replace src with actual image -->
+                                <div class="relative w-full h-full max-w-lg max-h-96 bg-white rounded-lg shadow-lg p-8 flex flex-col items-center justify-center border border-success/20">
+                                    <div class="w-32 h-32 bg-success/10 rounded-full flex items-center justify-center mb-6">
+                                        <i data-lucide="building" class="w-16 h-16 text-success"></i>
                                     </div>
-                                    <h4 class="text-xl font-bold text-slate-900 mb-2 text-center">Office Solutions</h4>
-                                    <p class="text-xs md:text-sm text-slate-600 text-center mb-6">Prime Dubai Locations</p>
-                                    <div class="flex flex-wrap justify-center gap-2 md:gap-3">
-                                        <div class="px-3 md:px-4 py-2 bg-success/10 rounded-lg flex items-center">
-                                            <i data-lucide="map-pin" class="w-4 h-4 text-success mr-2"></i>
-                                            <span class="text-[10px] md:text-xs font-semibold text-slate-700">Locations</span>
+                                    <h4 class="text-xl font-bold text-slate-900 mb-3 text-center">Office Solutions</h4>
+                                    <p class="text-sm text-slate-600 text-center mb-6">Flexi-Desks to Executive Suites</p>
+                                    <div class="flex gap-3">
+                                        <div class="px-4 py-2 bg-success/10 rounded-lg">
+                                            <i data-lucide="map-pin" class="w-5 h-5 text-success inline mr-2"></i>
+                                            <span class="text-xs font-semibold text-slate-700">Prime Locations</span>
                                         </div>
-                                        <div class="px-3 md:px-4 py-2 bg-success/10 rounded-lg flex items-center">
-                                            <i data-lucide="key" class="w-4 h-4 text-success mr-2"></i>
-                                            <span class="text-[10px] md:text-xs font-semibold text-slate-700">Ready</span>
+                                        <div class="px-4 py-2 bg-success/10 rounded-lg">
+                                            <i data-lucide="key" class="w-5 h-5 text-success inline mr-2"></i>
+                                            <span class="text-xs font-semibold text-slate-700">Move-In Ready</span>
                                         </div>
                                     </div>
                                 </div>
@@ -656,55 +595,58 @@
                 </div>
 
                 <!-- Card 4: Accounting & VAT -->
-                <div class="md:sticky top-12 md:top-20 md:h-[90vh] container mx-auto px-4 md:px-20 flex items-center justify-center" style="z-index: 4">
-                    <div class="w-full max-w-7xl md:h-[70vh] bg-white border border-slate-200 rounded-2xl md:rounded-lg overflow-hidden grid md:grid-cols-2 shadow-xl md:shadow-2xl">
+                <div class="sticky top-0 h-[90vh] container mx-auto px-8 md:px-20 flex items-center justify-center" style="z-index: 4">
+                    <div class="w-full max-w-7xl h-[90vh] md:h-[70vh] bg-white border border-slate-200 rounded-lg overflow-hidden grid md:grid-cols-2 shadow-2xl">
                         <!-- LEFT SIDE: CONTENT -->
                         <div class="p-8 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100 relative bg-gradient-to-br from-blue-400/5 to-transparent">
+                            
+                            
                             <div class="relative z-10">
-                                <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-400/10 text-blue-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-6 border border-blue-400/10">
+                                <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-400/10 text-blue-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-4 md:mb-6 border border-blue-400/10">
                                     SERVICE 04
                                 </div>
-                                <h3 class="text-2xl md:text-4xl font-bold text-primary mb-6">
+                                <h3 class="text-heading-2 text-primary mb-md">
                                     Accounting, VAT & Audit Services
                                 </h3>
-                                <p class="text-base md:text-lg text-slate-600 mb-8 max-w-md">
+                                <p class="text-lead text-slate-600 mb-lg max-w-md">
                                     Stay compliant with UAE laws while we handle bookkeeping, VAT, and corporate tax advisory.
                                 </p>
                                 
-                                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-3 md:gap-4">
+                                <div class="space-y-3 md:space-y-4">
                                     <div class="flex items-center gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
-                                        <span class="text-sm text-slate-700">Monthly bookkeeping</span>
+                                        <div class="w-1 h-1 rounded-full bg-blue-400"></div>
+                                        <span class="text-xs md:text-sm text-slate-700">Monthly bookkeeping</span>
                                     </div>
                                     <div class="flex items-center gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
-                                        <span class="text-sm text-slate-700">VAT & Tax filing</span>
+                                        <div class="w-1 h-1 rounded-full bg-blue-400"></div>
+                                        <span class="text-xs md:text-sm text-slate-700">VAT & Tax filing</span>
                                     </div>
                                     <div class="flex items-center gap-3">
-                                        <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
-                                        <span class="text-sm text-slate-700">Tax advisory</span>
+                                        <div class="w-1 h-1 rounded-full bg-blue-400"></div>
+                                        <span class="text-xs md:text-sm text-slate-700">Corporate tax advisory</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- RIGHT SIDE: GRAPHIC -->
-                        <div class="bg-gradient-to-br from-blue-400/10 to-slate-50 p-8 md:p-10 flex items-center justify-center relative overflow-hidden hidden sm:flex">
+                        <!-- RIGHT SIDE: IMAGE -->
+                        <div class="bg-gradient-to-br from-blue-400/10 to-slate-50 p-4 md:p-10 flex items-center justify-center relative overflow-hidden">
                             <div class="w-full h-full flex items-center justify-center">
-                                <div class="relative w-full h-full max-w-lg bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center justify-center border border-blue-400/20">
-                                    <div class="w-24 h-24 md:w-32 md:h-32 bg-blue-400/10 rounded-full flex items-center justify-center mb-6">
-                                        <i data-lucide="calculator" class="w-12 h-12 md:w-16 md:h-16 text-blue-400"></i>
+                                <!-- Image Placeholder - Replace src with actual image -->
+                                <div class="relative w-full h-full max-w-lg max-h-96 bg-white rounded-lg shadow-lg p-8 flex flex-col items-center justify-center border border-blue-400/20">
+                                    <div class="w-32 h-32 bg-blue-400/10 rounded-full flex items-center justify-center mb-6">
+                                        <i data-lucide="calculator" class="w-16 h-16 text-blue-400"></i>
                                     </div>
-                                    <h4 class="text-xl font-bold text-slate-900 mb-2 text-center">Financial Services</h4>
-                                    <p class="text-xs md:text-sm text-slate-600 text-center mb-6">Compliance & Expert Advisory</p>
-                                    <div class="flex flex-wrap justify-center gap-2 md:gap-3">
-                                        <div class="px-3 md:px-4 py-2 bg-blue-400/10 rounded-lg flex items-center">
-                                            <i data-lucide="file-check" class="w-4 h-4 text-blue-400 mr-2"></i>
-                                            <span class="text-[10px] md:text-xs font-semibold text-slate-700">Filing</span>
+                                    <h4 class="text-xl font-bold text-slate-900 mb-3 text-center">Accounting & VAT</h4>
+                                    <p class="text-sm text-slate-600 text-center mb-6">Full Compliance & Tax Advisory</p>
+                                    <div class="flex gap-3">
+                                        <div class="px-4 py-2 bg-blue-400/10 rounded-lg">
+                                            <i data-lucide="file-check" class="w-5 h-5 text-blue-400 inline mr-2"></i>
+                                            <span class="text-xs font-semibold text-slate-700">VAT Filing</span>
                                         </div>
-                                        <div class="px-3 md:px-4 py-2 bg-blue-400/10 rounded-lg flex items-center">
-                                            <i data-lucide="shield-check" class="w-4 h-4 text-blue-400 mr-2"></i>
-                                            <span class="text-[10px] md:text-xs font-semibold text-slate-700">Secure</span>
+                                        <div class="px-4 py-2 bg-blue-400/10 rounded-lg">
+                                            <i data-lucide="shield-check" class="w-5 h-5 text-blue-400 inline mr-2"></i>
+                                            <span class="text-xs font-semibold text-slate-700">Audit Ready</span>
                                         </div>
                                     </div>
                                 </div>
@@ -716,19 +658,19 @@
         </section>
 
         <!-- Process Section -->
-        <section id="how-it-works" class="py-12 md:py-24 bg-surface">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 md:mb-20">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-bold mb-6">
+        <section id="how-it-works" class="py-lg bg-surface">
+            <div class="container mx-auto">
+                <div class="text-center mb-xl">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-bold mb-md">
                         <span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
                         <span class="text-xs tracking-wider uppercase">Simple Process</span>
                     </div>
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6">Your <span class="text-brand">14-Day</span> Path to Dubai Business Ownership</h2>
-                    <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">A proven, transparent process designed for international investors.</p>
+                    <h2 class="text-heading-1 text-primary mb-md">Your <span class="text-brand">14-Day</span> Path to Dubai Business Ownership</h2>
+                    <p class="text-lead text-slate-600 max-w-3xl mx-auto">A proven, transparent process designed for international investors.</p>
                 </div>
 
                 <!-- 3 Step Cards Grid -->
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     <!-- Card 1: Discovery Call -->
                     <div class="relative bg-gradient-to-br from-slate-50 to-white p-8 rounded-lg border border-slate-200 shadow-lg hover:shadow-xl transition-all card-hover">
                         <div class="absolute -top-4 -right-4 w-16 h-16 bg-brand rounded-2xl flex items-center justify-center shadow-lg shadow-brand/30">
@@ -904,18 +846,18 @@
             </div>
         </section>
         <!-- Lead Magnets / Resources -->
-        <section id="calculator" class="py-12 md:py-24 bg-surface relative overflow-hidden">
-            <div class="container mx-auto px-6">
-                <div class="bg-slate-50 rounded-2xl md:rounded-lg p-8 md:p-12 lg:p-20 text-slate-900 flex flex-col lg:flex-row items-center gap-12 md:gap-20 border border-slate-100 shadow-sm">
+        <section id="calculator" class="py-lg bg-surface relative overflow-hidden">
+            <div class="container mx-auto">
+                <div class="bg-slate-50 rounded-lg p-md md:p-xl text-slate-900 flex flex-col lg:flex-row items-center gap-xl border border-slate-100 shadow-sm">
                     <div class="lg:w-2/3">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 text-brand text-xs font-bold mb-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 text-brand text-xs font-bold mb-md">
                             <span class="w-1 h-1 rounded-full bg-brand"></span>
                             SETKORP INSIGHTS
                         </div>
-                        <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-primary leading-tight">Expert Resources for Your Global <span class="text-brand">Expansion</span></h2>
-                        <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed">Get instant clarity on your Dubai setup costs or download our comprehensive 2024 incorporation guide.</p>
+                        <h2 class="text-heading-1 mb-md text-primary">Expert Resources for Your Global <span class="text-brand">Expansion</span></h2>
+                        <p class="text-lead text-slate-600 mb-xl">Get instant clarity on your Dubai setup costs or download our comprehensive 2024 incorporation guide.</p>
                         
-                        <div class="grid sm:grid-cols-2 gap-6 md:gap-8">
+                        <div class="grid md:grid-cols-2 gap-md">
                             <div class="bg-white p-xl rounded-lg border border-slate-100 shadow-xl shadow-slate-200/50">
                                 <div class="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center mb-md">
                                     <i data-lucide="calculator" class="w-6 h-6 text-brand"></i>
@@ -950,10 +892,10 @@
             </div>
         </section>
         <!-- FAQ Section -->
-        <section id="faq" class="py-12 md:py-24 bg-slate-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 md:mb-20">
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-primary">Your Questions, <span class="text-brand">Answered</span></h2>
+        <section id="faq" class="py-lg bg-slate-50">
+            <div class="container mx-auto">
+                <div class="text-center mb-xl">
+                    <h2 class="text-heading-1 text-primary">Your Questions, <span class="text-brand">Answered</span></h2>
                 </div>
 
                 <div class="max-w-3xl mx-auto space-y-4">
@@ -1023,70 +965,67 @@
         </section>
 
         <!-- Contact Section / Lead Gen -->
-        <section id="contact" class="py-12 md:py-24 bg-surface overflow-hidden relative">
-            <div class="container mx-auto px-6">
-                <div class="bg-white rounded-3xl md:rounded-lg overflow-hidden border border-slate-100 shadow-elevated flex flex-col lg:flex-row">
+        <section id="contact" class="py-lg bg-surface overflow-hidden relative">
+            <div class="container mx-auto">
+                <div class="bg-white rounded-lg overflow-hidden border border-slate-100 shadow-elevated flex flex-col lg:flex-row">
                     <!-- Info Side -->
-                    <div class="lg:w-1/2 p-8 md:p-16 lg:p-20 bg-slate-50 border-r border-slate-100">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 text-brand text-xs font-bold mb-8 md:mb-10">
+                    <div class="lg:w-1/2 p-md md:p-xl bg-slate-50 border-r border-slate-100">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 text-brand text-xs font-bold mb-md">
                             <span class="w-1 h-1 rounded-full bg-brand"></span>
                             GET IN TOUCH
                         </div>
-                        <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-primary leading-tight">Ready to Write Your Dubai <span class="text-brand">Success</span> Story?</h2>
-                        <p class="text-lg md:text-xl text-slate-600 mb-12 leading-relaxed">Experience transparency and strategic support from day one—book a free 30-minute strategy call today.</p>
+                        <h2 class="text-heading-1 mb-md text-primary">Ready to Write Your Dubai <span class="text-brand">Success</span> Story?</h2>
+                        <p class="text-lead text-slate-600 mb-xl">Experience transparency and strategic support from day one—book a free 30-minute strategy call today.</p>
                         
-                        <div class="space-y-6 md:space-y-8">
+                        <div class="space-y-6">
                             <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center text-brand shrink-0"><i data-lucide="check" class="w-5 h-5"></i></div>
-                                <span class="text-slate-700 font-medium md:text-lg">No obligation, no sales pressure</span>
+                                <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center text-brand"><i data-lucide="check" class="w-5 h-5"></i></div>
+                                <span class="text-slate-700 font-medium">No obligation, no sales pressure</span>
                             </div>
                             <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center text-brand shrink-0"><i data-lucide="check" class="w-5 h-5"></i></div>
-                                <span class="text-slate-700 font-medium md:text-lg">Free cost breakdown & timeline estimate</span>
+                                <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center text-brand"><i data-lucide="check" class="w-5 h-5"></i></div>
+                                <span class="text-slate-700 font-medium">Free cost breakdown & timeline estimate</span>
                             </div>
                             <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center text-brand shrink-0"><i data-lucide="check" class="w-5 h-5"></i></div>
-                                <span class="text-slate-700 font-medium md:text-lg">Speak with a UAE specialist</span>
+                                <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center text-brand"><i data-lucide="check" class="w-5 h-5"></i></div>
+                                <span class="text-slate-700 font-medium">Speak with a UAE specialist</span>
                             </div>
                         </div>
                         
-                        <div class="mt-12 md:mt-20 pt-12 md:pt-16 border-t border-slate-200">
-                            <p class="text-xs uppercase tracking-[0.2em] text-brand font-bold mb-4">Urgent Inquiry?</p>
-                            <a href="tel:+12345678" class="text-2xl md:text-4xl font-black text-primary hover:text-brand transition-colors">+971 4 XXX XXXX</a>
+                        <div class="mt-16 pt-16 border-t border-slate-200">
+                            <p class="text-sm uppercase tracking-widest text-brand font-bold mb-4">Urgent Inquiry?</p>
+                            <a href="tel:+12345678" class="text-3xl font-bold text-primary hover:text-brand transition-colors">+971 4 XXX XXXX</a>
                         </div>
                     </div>
 
                     <!-- Form Side -->
-                    <div class="lg:w-1/2 p-8 md:p-16 lg:p-20 bg-white">
-                        <form class="space-y-6 md:space-y-8">
+                    <div class="lg:w-1/2 p-8 md:p-16 bg-white">
+                        <form class="space-y-6">
                             <div class="grid md:grid-cols-2 gap-6">
-                                <div class="space-y-3">
-                                    <label class="text-sm font-bold text-primary uppercase tracking-wider">Full Name</label>
-                                    <input type="text" placeholder="John Doe" class="w-full px-4 py-4 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-brand/10 focus:border-brand transition-all">
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-primary">Full Name</label>
+                                    <input type="text" placeholder="John Doe" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand/20 focus:border-brand transition-all">
                                 </div>
-                                <div class="space-y-3">
-                                    <label class="text-sm font-bold text-primary uppercase tracking-wider">Email Address</label>
-                                    <input type="email" placeholder="john@example.com" class="w-full px-4 py-4 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-brand/10 focus:border-brand transition-all">
-                                </div>
-                            </div>
-                            <div class="space-y-3">
-                                <label class="text-sm font-bold text-primary uppercase tracking-wider">Company / Industry</label>
-                                <div class="relative">
-                                    <select class="w-full px-4 py-4 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-brand/10 focus:border-brand transition-all appearance-none cursor-pointer">
-                                        <option>Tech Startup</option>
-                                        <option>E-commerce</option>
-                                        <option>Holding Company</option>
-                                        <option>Consulting</option>
-                                        <option>Other</option>
-                                    </select>
-                                    <i data-lucide="chevron-down" class="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none"></i>
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-primary">Email Address</label>
+                                    <input type="email" placeholder="john@example.com" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand/20 focus:border-brand transition-all">
                                 </div>
                             </div>
-                            <div class="space-y-3">
-                                <label class="text-sm font-bold text-primary uppercase tracking-wider">Message / Goals</label>
-                                <textarea rows="4" placeholder="How can we help you launch?" class="w-full px-4 py-4 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-brand/10 focus:border-brand transition-all resize-none"></textarea>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-primary">Company / Industry</label>
+                                <select class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand/20 focus:border-brand transition-all appearance-none cursor-pointer">
+                                    <option>Tech Startup</option>
+                                    <option>E-commerce</option>
+                                    <option>Holding Company</option>
+                                    <option>Consulting</option>
+                                    <option>Other</option>
+                                </select>
                             </div>
-                            <button type="submit" class="w-full bg-gradient-to-r from-brand to-brandhover text-white py-5 rounded-xl font-black text-lg hover:shadow-2xl transition-all shadow-xl shadow-brand/30 uppercase tracking-widest">
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-primary">Message / Goals</label>
+                                <textarea rows="4" placeholder="How can we help you launch?" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand/20 focus:border-brand transition-all resize-none"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-brand text-white py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all shadow-xl shadow-brand/20">
                                 Send My Request
                             </button>
                             <p class="text-center text-xs text-slate-400">By submitting, you agree to our privacy policy. We'll never spam you.</p>
@@ -1098,37 +1037,37 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary text-white py-12 md:py-24 px-6 border-t border-white/5">
+    <footer class="bg-primary text-white py-lg px-6 border-t border-white/5">
         <div class="container mx-auto">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-1 sm:col-span-2">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
                     <div class="text-2xl font-bold mb-6 text-white"><span class="text-brand">SET</span>KORP</div>
-                    <p class="text-slate-400 max-w-sm mb-8 text-sm md:text-base">Expert business incorporation, banking, real estate & accounting for freezone and mainland setups in Dubai and UAE.</p>
+                    <p class="text-slate-400 max-w-sm mb-8">Expert business incorporation, banking, real estate & accounting for freezone and mainland setups in Dubai and UAE.</p>
                     <div class="flex gap-4">
                         <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
                         <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
                     </div>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-6 uppercase tracking-widest text-xs text-brand">Quick Links</h4>
+                    <h4 class="font-bold mb-6">Quick Links</h4>
                     <ul class="space-y-4 text-slate-400 text-sm">
-                        <li><a href="#industries" class="hover:text-brand transition-colors">Industries</a></li>
-                        <li><a href="#services" class="hover:text-brand transition-colors">Services</a></li>
-                        <li><a href="#how-it-works" class="hover:text-brand transition-colors">How It Works</a></li>
-                        <li><a href="#faq" class="hover:text-brand transition-colors">FAQs</a></li>
+                        <li><a href="#services" class="hover:text-brand">Services</a></li>
+                        <li><a href="#expertise" class="hover:text-brand">Industry Expertise</a></li>
+                        <li><a href="#how-it-works" class="hover:text-brand">Process</a></li>
+                        <li><a href="#faq" class="hover:text-brand">FAQ</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-6 uppercase tracking-widest text-xs text-brand">UAE Office</h4>
+                    <h4 class="font-bold mb-6">UAE Office</h4>
                     <ul class="space-y-4 text-slate-400 text-sm">
                         <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-brand shrink-0"></i> 123 Business Bay, Premium Tower, Dubai, UAE</li>
                         <li class="flex items-center gap-3"><i data-lucide="mail" class="w-5 h-5 text-brand shrink-0"></i> contact@setkorp.ae</li>
                     </ul>
                 </div>
             </div>
-            <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-xs md:text-sm text-slate-500">
+            <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500">
                 <p>&copy; 2024 Setkorp Business Consultancy. All rights reserved.</p>
-                <div class="flex gap-4 md:gap-8">
+                <div class="flex gap-8">
                     <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
                     <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
                 </div>
@@ -1138,34 +1077,9 @@
 
     </div>
 
-    <!-- Initialize Icons & Mobile Menu -->
+    <!-- Initialize Icons & Animations -->
     <script>
         lucide.createIcons();
-
-        // Mobile Menu Logic
-        const menuToggle = document.getElementById('menu-toggle');
-        const menuClose = document.getElementById('menu-close');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuOverlay = document.getElementById('menu-overlay');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        const toggleMenu = (show) => {
-            mobileMenu.classList.toggle('active', show);
-            menuOverlay.classList.toggle('hidden', !show);
-            document.body.style.overflow = show ? 'hidden' : '';
-        };
-
-        menuToggle?.addEventListener('click', () => toggleMenu(true));
-        menuClose?.addEventListener('click', () => toggleMenu(false));
-        menuOverlay?.addEventListener('click', () => toggleMenu(false));
-        mobileLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
-
-        // Close menu on window resize to desktop
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 1024) { // lg breakpoint
-                toggleMenu(false);
-            }
-        });
 
         // Intersection Observer for Reveal animations
         const revealCallback = (entries, observer) => {
