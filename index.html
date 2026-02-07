@@ -144,19 +144,19 @@
                 
                 <!-- Navigation Links - Centered -->
                 <div class="hidden lg:flex items-center gap-8 text-sm font-medium">
-                    <a href="#industries" class="hover:text-brand transition-colors">Industries</a>
-                    <a href="#services" class="hover:text-brand transition-colors">Services</a>
-                    <a href="#how-it-works" class="hover:text-brand transition-colors">How It Works</a>
-                    <a href="#faq" class="hover:text-brand transition-colors">FAQs</a>
+                    <a href="#industries" class="cursor-pointer hover:text-brand transition-colors duration-200 focus:outline-none focus:text-brand">Industries</a>
+                    <a href="#services" class="cursor-pointer hover:text-brand transition-colors duration-200 focus:outline-none focus:text-brand">Services</a>
+                    <a href="#how-it-works" class="cursor-pointer hover:text-brand transition-colors duration-200 focus:outline-none focus:text-brand">How It Works</a>
+                    <a href="#faq" class="cursor-pointer hover:text-brand transition-colors duration-200 focus:outline-none focus:text-brand">FAQs</a>
                 </div>
 
                 <!-- Actions Group -->
                 <div class="flex-1 flex items-center justify-end gap-4">
-                    <a href="#contact" class="hidden sm:flex bg-gradient-to-r from-brand to-brandhover text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:shadow-xl transition-all shadow-lg shadow-brand/20">
+                    <a href="#contact" class="hidden sm:flex cursor-pointer bg-gradient-to-r from-brand to-brandhover text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:shadow-xl transition-all duration-200 shadow-lg shadow-brand/20 focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2">
                         Book Strategy Call
                     </a>
                     <!-- Mobile Menu Button -->
-                    <button id="menu-toggle" class="lg:hidden p-2 text-primary hover:text-brand transition-colors">
+                    <button id="menu-toggle" class="lg:hidden p-2 text-primary hover:text-brand transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 rounded-lg" aria-label="Open menu">
                         <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
                 </div>
@@ -208,15 +208,15 @@
                 <div class="container mx-auto px-4">
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-6">
                         <!-- Primary CTA -->
-                        <a href="#contact" class="group w-full sm:w-auto bg-gradient-to-r from-brand to-brandhover text-white px-6 md:px-10 py-4 md:py-5 rounded-xl text-sm md:text-lg font-black transition-all duration-300 shadow-[0_20px_40px_-12px_rgba(227,88,77,0.4)] hover:shadow-[0_30px_60px_-12px_rgba(227,88,77,0.5)] hover:-translate-y-1 ring-1 ring-white/20 ring-inset flex items-center justify-center relative overflow-hidden">
+                        <a href="#contact" class="group w-full sm:w-auto cursor-pointer bg-gradient-to-r from-brand to-brandhover text-white px-6 md:px-10 py-4 md:py-5 rounded-xl text-sm md:text-lg font-black transition-all duration-200 shadow-[0_20px_40px_-12px_rgba(227,88,77,0.4)] hover:shadow-[0_30px_60px_-12px_rgba(227,88,77,0.5)] hover:-translate-y-1 ring-1 ring-white/20 ring-inset flex items-center justify-center relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2" aria-label="Book your free strategy call">
                             <span class="relative z-10 flex items-center">
                                 Book Your Free Strategy Call
-                                <i data-lucide="arrow-right" class="w-4 h-4 md:w-5 md:h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                <i data-lucide="arrow-right" class="w-4 h-4 md:w-5 md:h-5 ml-2 transition-transform duration-200 group-hover:translate-x-1"></i>
                             </span>
                         </a>
                         
                         <!-- Secondary CTA -->
-                        <a href="#calculator" class="group w-full sm:w-auto bg-white/95 backdrop-blur-md text-primary border border-slate-200 px-6 md:px-10 py-4 md:py-5 rounded-xl text-sm md:text-lg font-bold hover:bg-white hover:-translate-y-1 transition-all duration-300 flex items-center justify-center shadow-lg">
+                        <a href="#calculator" class="group w-full sm:w-auto cursor-pointer bg-white/95 backdrop-blur-md text-primary border border-slate-200 px-6 md:px-10 py-4 md:py-5 rounded-xl text-sm md:text-lg font-bold hover:bg-white hover:-translate-y-1 transition-all duration-200 flex items-center justify-center shadow-lg focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2" aria-label="Open setup cost calculator">
                             <span class="flex items-center">
                                 <div class="w-2 h-2 bg-brand rounded-full mr-2 animate-pulse"></div>
                                 Setup Cost Calculator
@@ -251,9 +251,9 @@
                             <!-- Premium Industry Cards Grid -->
                             <div class="grid grid-cols-2 md:grid-cols-2 gap-4">
                                 <!-- Card 1: Holding Companies -->
-                                <div class="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                                <div class="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-200 hover:shadow-lg hover:scale-105 cursor-pointer">
                                     <div class="flex flex-col items-start gap-2">
-                                        <div class="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors">
+                                        <div class="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors duration-200">
                                             <i data-lucide="briefcase" class="w-4 h-4 text-brand"></i>
                                         </div>
                                         <span class="text-sm md:text-base font-semibold text-primary">Holding Companies</span>
@@ -261,9 +261,9 @@
                                 </div>
 
                                 <!-- Card 2: Media & Marketing -->
-                                <div class="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                                <div class="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-200 hover:shadow-lg hover:scale-105 cursor-pointer">
                                     <div class="flex flex-col items-start gap-2">
-                                        <div class="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors">
+                                        <div class="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors duration-200">
                                             <i data-lucide="megaphone" class="w-4 h-4 text-brand"></i>
                                         </div>
                                         <span class="text-sm md:text-base font-semibold text-primary">Media & Marketing</span>
@@ -271,9 +271,9 @@
                                 </div>
 
                                 <!-- Card 3: Energy -->
-                                <div class="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                                <div class="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-200 hover:shadow-lg hover:scale-105 cursor-pointer">
                                     <div class="flex flex-col items-start gap-2">
-                                        <div class="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors">
+                                        <div class="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors duration-200">
                                             <i data-lucide="zap" class="w-4 h-4 text-brand"></i>
                                         </div>
                                         <span class="text-sm md:text-base font-semibold text-primary">Energy Companies</span>
@@ -281,9 +281,9 @@
                                 </div>
 
                                 <!-- Card 4: Software & Tech -->
-                                <div class="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                                <div class="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-200 hover:shadow-lg hover:scale-105 cursor-pointer">
                                     <div class="flex flex-col items-start gap-2">
-                                        <div class="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors">
+                                        <div class="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors duration-200">
                                             <i data-lucide="code" class="w-4 h-4 text-brand"></i>
                                         </div>
                                         <span class="text-sm md:text-base font-semibold text-primary">Software & Tech</span>
@@ -291,9 +291,9 @@
                                 </div>
 
                                 <!-- Card 5: Trading -->
-                                <div class="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                                <div class="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-200 hover:shadow-lg hover:scale-105 cursor-pointer">
                                     <div class="flex flex-col items-start gap-2">
-                                        <div class="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors">
+                                        <div class="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors duration-200">
                                             <i data-lucide="trending-up" class="w-4 h-4 text-brand"></i>
                                         </div>
                                         <span class="text-sm md:text-base font-semibold text-primary">Trading Companies</span>
@@ -301,9 +301,9 @@
                                 </div>
 
                                 <!-- Card 6: Project Management -->
-                                <div class="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                                <div class="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-200 hover:shadow-lg hover:scale-105 cursor-pointer">
                                     <div class="flex flex-col items-start gap-2">
-                                        <div class="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors">
+                                        <div class="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors duration-200">
                                             <i data-lucide="clipboard-check" class="w-4 h-4 text-brand"></i>
                                         </div>
                                         <span class="text-sm md:text-base font-semibold text-primary">Project Management</span>
@@ -311,9 +311,9 @@
                                 </div>
 
                                 <!-- Card 7: Consulting -->
-                                <div class="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                                <div class="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-200 hover:shadow-lg hover:scale-105 cursor-pointer">
                                     <div class="flex flex-col items-start gap-2">
-                                        <div class="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors">
+                                        <div class="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors duration-200">
                                             <i data-lucide="users" class="w-4 h-4 text-brand"></i>
                                         </div>
                                         <span class="text-sm md:text-base font-semibold text-primary">Consulting Firms</span>
@@ -321,9 +321,9 @@
                                 </div>
 
                                 <!-- Card 8: Event Management -->
-                                <div class="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-300 hover:shadow-lg hover:scale-105">
+                                <div class="group relative bg-surface p-4 rounded-xl border border-slate-200 hover:border-brand/40 transition-all duration-200 hover:shadow-lg hover:scale-105 cursor-pointer">
                                     <div class="flex flex-col items-start gap-2">
-                                        <div class="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors">
+                                        <div class="w-8 h-8 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand/20 transition-colors duration-200">
                                             <i data-lucide="calendar" class="w-4 h-4 text-brand"></i>
                                         </div>
                                         <span class="text-sm md:text-base font-semibold text-primary">Event Management</span>
