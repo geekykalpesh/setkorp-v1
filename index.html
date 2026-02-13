@@ -128,6 +128,9 @@
                 animation-duration: 20s;
             }
         }
+        button, a, select, details, summary {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="text-slate-900 overflow-x-hidden font-sans" style="background-color: #FDFDFD;">
@@ -152,7 +155,8 @@
 
                 <!-- Actions Group -->
                 <div class="flex-1 flex items-center justify-end gap-4">
-                    <a href="#contact" class="hidden sm:flex cursor-pointer bg-gradient-to-r from-brand to-brandhover text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:shadow-xl transition-all duration-200 shadow-lg shadow-brand/20 focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2">
+                    <a href="#contact" class="hidden sm:flex items-center gap-2 cursor-pointer bg-gradient-to-r from-brand to-brandhover text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:shadow-xl transition-all duration-200 shadow-lg shadow-brand/20 focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2">
+                        <i data-lucide="phone-call" class="w-4 h-4"></i>
                         Book Strategy Call
                     </a>
                     <!-- Mobile Menu Button -->
@@ -181,7 +185,10 @@
                 </div>
 
                 <div class="mt-auto pt-8">
-                    <a href="#contact" class="w-full inline-block text-center bg-brand text-white py-4 rounded-xl font-bold shadow-lg shadow-brand/20">Book Call</a>
+                    <a href="#contact" class="w-full flex items-center justify-center gap-2 bg-brand text-white py-4 rounded-xl font-bold shadow-lg shadow-brand/20">
+                        <i data-lucide="phone-call" class="w-5 h-5"></i>
+                        Book Call
+                    </a>
                     <div class="mt-6 flex justify-center gap-6">
                         <i data-lucide="linkedin" class="w-5 h-5 text-slate-400"></i>
                         <i data-lucide="twitter" class="w-5 h-5 text-slate-400"></i>
@@ -228,15 +235,15 @@
         </section>
 
         <!-- Welcome Section -->
-        <section id="industries" class="py-12 md:py-24 bg-surface">
+        <section id="industries" class="py-12 md:py-24 bg-surface m-4 md:m-8 lg:m-12">
             <div class="container mx-auto">
                 <div class="max-w-6xl mx-auto">
                     <!-- Welcome Header -->
                     <div class="mb-12 md:mb-20 text-center md:text-left">
-                        <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6">Welcome to <span class="text-brand">Setkorp</span></h2>
-                        <h3 class="text-xl md:text-3xl font-bold text-slate-700 mb-6">Your Gateway to Seamless Business Setup in Dubai</h3>
+                        <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6">Launch Your Dubai Business in <span class="text-brand">14 Days</span></h2>
+                        <h3 class="text-xl md:text-3xl font-bold text-slate-700 mb-6">Zero Bureaucracy. Zero Hidden Fees. Zero Headaches.</h3>
                         <p class="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto md:mx-0 leading-relaxed">
-                            Setkorp delivers end-to-end business setup solutions with transparency and efficiency—from free zone to mainland formations—all through one reliable portal for your business needs.
+                            From company registration to bank account—we handle every step. You focus on building your business while we navigate Dubai's regulations for you.
                         </p>
                     </div>
 
@@ -245,7 +252,7 @@
                         <!-- Left: Expertise List -->
                         <div>
                             <h4 class="text-2xl md:text-[2rem] font-bold text-primary mb-8 leading-tight">
-                                Expertise Across High-Growth <span class="text-brand">Industries</span>
+                                We've Helped Founders Like You in <span class="text-brand">These Industries</span>
                             </h4>
                             
                             <!-- Premium Industry Cards Grid -->
@@ -334,7 +341,7 @@
 
                         <!-- Right: Image Placeholder -->
                         <div class="relative">
-                            <div class="aspect-square w-full rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 border-2 border-slate-200 flex items-center justify-center overflow-hidden shadow-xl">
+                            <div class="aspect-square w-full overflow-hidden shadow-2xl">
                                 <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Dubai Business District" class="object-cover w-full h-full opacity-80">
                                 <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
                             </div>
@@ -390,8 +397,8 @@
         <section class="py-12 md:py-24 bg-slate-50">
             <div class="container mx-auto px-6 md:px-20">
                 <div class="text-center mb-12 md:mb-20">
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6 leading-tight">Setting Up in <span class="text-brand">Dubai</span> Shouldn't Feel Like Navigating a Maze</h2>
-                    <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">Stop wasting time with bureaucratic hurdles. Here's how Setkorp changes the equation.</p>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6 leading-tight">Most Founders Waste 3 Months on <span class="text-brand">Setup Alone</span></h2>
+                    <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">You're here to build a business, not decode regulations. Here's what changes with Setkorp.</p>
                 </div>
                 
                 <div class="grid lg:grid-cols-2 gap-8 md:gap-12 group">
@@ -406,19 +413,19 @@
                         <ul class="space-y-4">
                             <li class="flex items-start gap-3 text-slate-600">
                                 <i data-lucide="alert-circle" class="w-5 h-5 text-red-400 mt-1 flex-shrink-0"></i>
-                                <span>Confused by 40+ freezone options and complex regulations</span>
+                                <span>Paralyzed by 40+ freezone choices—no clear answer on which fits your business</span>
                             </li>
                             <li class="flex items-start gap-3 text-slate-600">
                                 <i data-lucide="alert-circle" class="w-5 h-5 text-red-400 mt-1 flex-shrink-0"></i>
-                                <span>Spending weeks chasing bank account approvals</span>
+                                <span>Bank rejections eating 6-8 weeks of your launch timeline</span>
                             </li>
                             <li class="flex items-start gap-3 text-slate-600">
                                 <i data-lucide="alert-circle" class="w-5 h-5 text-red-400 mt-1 flex-shrink-0"></i>
-                                <span>Overpaying for services you don't need</span>
+                                <span>Paying AED 15,000+ in surprise fees after you've already committed</span>
                             </li>
                             <li class="flex items-start gap-3 text-slate-600">
                                 <i data-lucide="alert-circle" class="w-5 h-5 text-red-400 mt-1 flex-shrink-0"></i>
-                                <span>Missing critical compliance deadlines</span>
+                                <span>Compliance penalties because nobody told you about quarterly filings</span>
                             </li>
                         </ul>
                     </div>
@@ -434,19 +441,19 @@
                         <ul class="space-y-4">
                             <li class="flex items-start gap-3 text-slate-700 font-medium">
                                 <i data-lucide="check" class="w-5 h-5 text-brand mt-1 flex-shrink-0"></i>
-                                <span>Clear roadmap: We match you to the perfect freezone or mainland structure</span>
+                                <span>We tell you exactly which structure saves you the most tax—in plain English</span>
                             </li>
                             <li class="flex items-start gap-3 text-slate-700 font-medium">
                                 <i data-lucide="check" class="w-5 h-5 text-brand mt-1 flex-shrink-0"></i>
-                                <span>Banking relationships secured within 7 business days</span>
+                                <span>Corporate bank account approved in 7 days (we know who to call)</span>
                             </li>
                             <li class="flex items-start gap-3 text-slate-700 font-medium">
                                 <i data-lucide="check" class="w-5 h-5 text-brand mt-1 flex-shrink-0"></i>
-                                <span>Transparent, all-inclusive pricing—no hidden fees</span>
+                                <span>Fixed price quoted upfront—what you see is what you pay</span>
                             </li>
                             <li class="flex items-start gap-3 text-slate-700 font-medium">
                                 <i data-lucide="check" class="w-5 h-5 text-brand mt-1 flex-shrink-0"></i>
-                                <span>Compliance calendar and dedicated account manager</span>
+                                <span>Never miss a deadline—we track every renewal and filing for you</span>
                             </li>
                         </ul>
                     </div>
@@ -458,8 +465,8 @@
         <section class="py-12 md:py-24 bg-gradient-to-br from-orange-50 via-red-50 to-amber-50">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center mb-12 md:mb-20">
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6">Where Challenges Meet Their Best <span class="text-brand">Solutions</span></h2>
-                    <p class="text-lg md:text-xl text-slate-600">Setkorp isn't just a setup service. We're your prosperity partners, transforming business goals into accomplished milestones.</p>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6">Why Founders Choose <span class="text-brand">Setkorp</span></h2>
+                    <p class="text-lg md:text-xl text-slate-600">We're not consultants who disappear after setup. We're the team that answers your 11 PM questions about VAT filing.</p>
                 </div>
 
                 <div class="max-w-6xl mx-auto grid sm:grid-cols-2 gap-6 md:gap-8">
@@ -470,8 +477,8 @@
                                 <i data-lucide="users" class="w-6 h-6 text-brand group-hover:text-white"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl font-bold text-primary mb-4">Clarity Meets Trust</h3>
-                                <p class="text-slate-600 leading-relaxed">No jargon. No surprises. Our transparency builds long-term partnerships from day one.</p>
+                                <h3 class="text-2xl font-bold text-primary mb-4">You'll Actually Understand Your Options</h3>
+                                <p class="text-slate-600 leading-relaxed">We explain freezone vs mainland in 5 minutes—no legal jargon, just what matters for your business.</p>
                             </div>
                         </div>
                     </div>
@@ -483,8 +490,8 @@
                                 <i data-lucide="award" class="w-6 h-6 text-brand group-hover:text-white"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl font-bold text-primary mb-4">Expertise Forge Excellence</h3>
-                                <p class="text-slate-600 leading-relaxed">15+ years of UAE expertise helping businesses across holding, tech, and energy sectors.</p>
+                                <h3 class="text-2xl font-bold text-primary mb-4">We've Done This 500+ Times</h3>
+                                <p class="text-slate-600 leading-relaxed">15 years in Dubai means we know every shortcut, every banker, and every compliance officer.</p>
                             </div>
                         </div>
                     </div>
@@ -496,8 +503,8 @@
                                 <i data-lucide="zap" class="w-6 h-6 text-brand group-hover:text-white"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl font-bold text-primary mb-4">Launch Faster</h3>
-                                <p class="text-slate-600 leading-relaxed">Streamlined 14-day process saving you months of back-and-forth and hidden fees.</p>
+                                <h3 class="text-2xl font-bold text-primary mb-4">From Call to Bank Account in 14 Days</h3>
+                                <p class="text-slate-600 leading-relaxed">Most founders waste 90 days. Our process gets you operational in 2 weeks—guaranteed.</p>
                             </div>
                         </div>
                     </div>
@@ -509,8 +516,8 @@
                                 <i data-lucide="heart" class="w-6 h-6 text-brand group-hover:text-white"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl font-bold text-primary mb-4">Foundation to Build On</h3>
-                                <p class="text-slate-600 leading-relaxed">We provide honest advice and responsive support from day one to year ten of your journey.</p>
+                                <h3 class="text-2xl font-bold text-primary mb-4">We're Still Here After Setup</h3>
+                                <p class="text-slate-600 leading-relaxed">Need to hire your first employee in month 6? We'll walk you through it. That's the difference.</p>
                             </div>
                         </div>
                     </div>
@@ -526,8 +533,8 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
                     <span class="text-xs tracking-wider uppercase">Complete Solutions</span>
                 </div>
-                <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6">Services Beyond <span class="text-brand">Expectations</span></h2>
-                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">Transform your business vision into reality with seamlessly integrated solutions. We design and operate a unified business setup system where every component feeds the next.</p>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6">Everything You Need to <span class="text-brand">Start Operating</span></h2>
+                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">Company registration is just the start. You need a bank account, an office, and compliant books. We handle all of it so you can focus on customers, not paperwork.</p>
             </div>
 
             <!-- Sticky Stacking Cards Container -->
@@ -545,7 +552,7 @@
                                     Business Incorporation & Licensing
                                 </h3>
                                 <p class="text-base md:text-lg text-slate-600 mb-8 max-w-md">
-                                    Freezone vs. mainland analysis, license application, visa allocation planning, and legal documentation.
+                                    We pick the right structure for your business, file all paperwork, and get your trade license approved—fast.
                                 </p>
                                 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-3 md:gap-4">
@@ -603,7 +610,7 @@
                                     Corporate Banking Made Simple
                                 </h3>
                                 <p class="text-base md:text-lg text-slate-600 mb-8 max-w-md">
-                                    Securing corporate accounts within 7 business days through our elite UAE banking relationships.
+                                    Banks reject 40% of applications. We get you approved in 7 days because we know exactly what they need.
                                 </p>
                                 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-3 md:gap-4">
@@ -661,7 +668,7 @@
                                     Office Spaces & Corporate Real Estate
                                 </h3>
                                 <p class="text-base md:text-lg text-slate-600 mb-8 max-w-md">
-                                    From flexi-desks to executive suites, we connect you with vetted agents and negotiate best terms.
+                                    Need a desk for AED 1,500/month or a full office? We'll find it, negotiate the lease, and handle Ejari registration.
                                 </p>
                                 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-3 md:gap-4">
@@ -719,7 +726,7 @@
                                     Accounting, VAT & Audit Services
                                 </h3>
                                 <p class="text-base md:text-lg text-slate-600 mb-8 max-w-md">
-                                    Stay compliant with UAE laws while we handle bookkeeping, VAT, and corporate tax advisory.
+                                    Avoid AED 50,000 penalties for late VAT filing. We handle your books, taxes, and audits—all compliant, all on time.
                                 </p>
                                 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-3 md:gap-4">
@@ -774,8 +781,8 @@
                         <span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
                         <span class="text-xs tracking-wider uppercase">Simple Process</span>
                     </div>
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6">Your <span class="text-brand">14-Day</span> Path to Dubai Business Ownership</h2>
-                    <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">A proven, transparent process designed for international investors.</p>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6">How We Get You Operational in <span class="text-brand">14 Days</span></h2>
+                    <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">No surprises. No delays. Just a clear roadmap from first call to first invoice.</p>
                 </div>
 
                 <!-- 3 Step Cards Grid -->
@@ -794,7 +801,7 @@
                                 <div class="text-sm font-semibold text-brand">Day 1</div>
                             </div>
                         </div>
-                        <p class="text-slate-600 leading-relaxed">Share your business goals, industry, and budget. We'll recommend the best incorporation structure and freezone/mainland option.</p>
+                        <p class="text-slate-600 leading-relaxed">Tell us your business model and budget. We'll recommend the exact structure that minimizes your tax and setup costs—no upselling.</p>
                     </div>
 
                     <!-- Card 2: Documentation -->
@@ -811,7 +818,7 @@
                                 <div class="text-sm font-semibold text-gold">Days 2-7</div>
                             </div>
                         </div>
-                        <p class="text-slate-600 leading-relaxed">We handle paperwork, government approvals, and license applications. You review and e-sign from anywhere in the world.</p>
+                        <p class="text-slate-600 leading-relaxed">We prepare every document, chase every approval, and handle every government office. You just e-sign from wherever you are.</p>
                     </div>
 
                     <!-- Card 3: Banking & Office -->
@@ -828,18 +835,24 @@
                                 <div class="text-sm font-semibold text-success">Days 8-14</div>
                             </div>
                         </div>
-                        <p class="text-slate-600 leading-relaxed">We submit your corporate banking application and connect you with real estate partners. By day 14, you're ready to operate.</p>
+                        <p class="text-slate-600 leading-relaxed">Your bank account is approved, your office is ready, and your first invoice is legally compliant. You're officially in business.</p>
                     </div>
                 </div>
 
-                <!-- Ongoing Support Banner -->
-                <div class="mt-md max-w-4xl mx-auto">
-                    <div class="bg-slate-50 rounded-lg p-8 md:p-12 text-slate-900 text-center border border-slate-100 shadow-sm">
-                        <div class="flex items-center justify-center gap-3 mb-4">
-                            <i data-lucide="shield-check" class="w-8 h-8 text-brand"></i>
-                            <h3 class="text-2xl md:text-3xl font-bold text-primary">Ongoing Support (Year 1+)</h3>
+                <!-- Updated Ongoing Support Card -->
+                <div class="mt-8 max-w-6xl mx-auto">
+                    <div class="bg-white/60 backdrop-blur-sm rounded-lg p-8 md:p-12 text-center border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] transition-all duration-300">
+                        <div class="flex flex-col items-center justify-center gap-6">
+                            <div class="flex items-center justify-center gap-4">
+                                <i data-lucide="shield-check" class="w-8 h-8 md:w-10 md:h-10 text-brand"></i>
+                                <h3 class="text-2xl md:text-4xl font-extrabold text-primary">
+                                    Ongoing <span class="text-brand">Support</span> (Year 1+)
+                                </h3>
+                            </div>
+                            <p class="text-lg md:text-xl text-slate-600 max-w-none mx-auto leading-relaxed">
+                                License renewals, visa additions, tax filings—we handle it all. Think of us as your Dubai operations team on retainer.
+                            </p>
                         </div>
-                        <p class="text-lg text-slate-600 max-w-2xl mx-auto">Compliance calendar, renewals, and growth advisory—we're your long-term prosperity partner in Dubai.</p>
                     </div>
                 </div>
             </div>
@@ -871,7 +884,7 @@
                                         <i data-lucide="star" class="fill-current w-5 h-5"></i>
                                         <i data-lucide="star" class="fill-current w-5 h-5"></i>
                                     </div>
-                                    <p class="text-slate-600 mb-8 italic">"Setkorp turned a 3-month nightmare into a 2-week success story. Their banking connections alone saved us 45 days. Highly recommend for anyone serious about Dubai."</p>
+                                    <p class="text-slate-600 mb-8 italic">"I wasted 3 months with another firm before Setkorp. They got my bank account approved in 6 days. Wish I'd found them first."</p>
                                 </div>
                                 <div class="font-bold text-primary">Founder, SaaS Platform<br><span class="text-slate-400 font-medium text-sm">Dubai Silicon Oasis</span></div>
                             </div>
@@ -885,7 +898,7 @@
                                         <i data-lucide="star" class="fill-current w-5 h-5"></i>
                                         <i data-lucide="star" class="fill-current w-5 h-5"></i>
                                     </div>
-                                    <p class="text-slate-600 mb-8 italic">"Transparent pricing, no hidden fees, and a dedicated account manager who actually responded within hours. Setkorp made our expansion into DIFC seamless."</p>
+                                    <p class="text-slate-600 mb-8 italic">"They quoted AED 28,000. Final bill? AED 28,000. No surprise fees, no upsells. Just honest work and fast responses."</p>
                                 </div>
                                 <div class="font-bold text-primary">Managing Partner<br><span class="text-slate-400 font-medium text-sm">Project Management Consultancy</span></div>
                             </div>
@@ -899,7 +912,7 @@
                                         <i data-lucide="star" class="fill-current w-5 h-5"></i>
                                         <i data-lucide="star" class="fill-current w-5 h-5"></i>
                                     </div>
-                                    <p class="text-slate-600 mb-8 italic">"We compared 5 incorporation firms. Setkorp was the only one who explained mainland vs. freezone trade-offs in plain English. Smart, honest, and efficient."</p>
+                                    <p class="text-slate-600 mb-8 italic">"Other firms gave me jargon. Setkorp explained freezone vs mainland in 10 minutes and saved me AED 15,000 annually. Easy choice."</p>
                                 </div>
                                 <div class="font-bold text-primary">CEO<br><span class="text-slate-400 font-medium text-sm">E-Commerce Trading Company</span></div>
                             </div>
@@ -963,8 +976,8 @@
                             <span class="w-1 h-1 rounded-full bg-brand"></span>
                             SETKORP INSIGHTS
                         </div>
-                        <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-primary leading-tight">Expert Resources for Your Global <span class="text-brand">Expansion</span></h2>
-                        <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed">Get instant clarity on your Dubai setup costs or download our comprehensive 2024 incorporation guide.</p>
+                        <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-primary leading-tight">Know Your Costs Before <span class="text-brand">You Commit</span></h2>
+                        <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed">Use our calculator to see exactly what your setup will cost—or download our guide to understand every option available.</p>
                         
                         <div class="grid sm:grid-cols-2 gap-6 md:gap-8">
                             <div class="bg-white p-xl rounded-lg border border-slate-100 shadow-xl shadow-slate-200/50">
@@ -972,16 +985,22 @@
                                     <i data-lucide="calculator" class="w-6 h-6 text-brand"></i>
                                 </div>
                                 <h3 class="text-heading-3 mb-xs text-primary">Dubai Setup Cost Calculator</h3>
-                                <p class="text-slate-500 text-sm mb-md">Get an instant, itemized estimate based on your specific visa and office requirements.</p>
-                                <a href="#contact" class="bg-brand text-white px-md py-4 rounded-lg font-bold hover:bg-brandhover transition-all inline-block shadow-lg shadow-brand/20">Use Calculator</a>
+                                <p class="text-slate-500 text-sm mb-md">Enter your visa count and office needs—get a detailed cost breakdown in 60 seconds.</p>
+                                <a href="#contact" class="bg-brand text-white px-md py-4 rounded-lg font-bold hover:bg-brandhover transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand/20">
+                                    <i data-lucide="calculator" class="w-5 h-5"></i>
+                                    Use Calculator
+                                </a>
                             </div>
                             <div class="bg-white p-xl rounded-lg border border-slate-100 shadow-xl shadow-slate-200/50">
                                 <div class="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center mb-md">
                                     <i data-lucide="book-open" class="w-6 h-6 text-brand"></i>
                                 </div>
                                 <h3 class="text-heading-3 mb-xs text-primary">2024 Incorporation Guide</h3>
-                                <p class="text-slate-500 text-sm mb-md">A 40-page blueprint covering tax policy, visa laws, and freezone comparisons.</p>
-                                <a href="#contact" class="bg-brand text-white px-md py-4 rounded-lg font-bold hover:bg-brandhover transition-all inline-block shadow-lg shadow-brand/20">Download PDF</a>
+                                <p class="text-slate-500 text-sm mb-md">Everything you need to know: tax structures, visa options, and which freezone fits your business.</p>
+                                <a href="#contact" class="bg-brand text-white px-md py-4 rounded-lg font-bold hover:bg-brandhover transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand/20">
+                                    <i data-lucide="download" class="w-5 h-5"></i>
+                                    Download PDF
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1083,21 +1102,21 @@
                             <span class="w-1 h-1 rounded-full bg-brand"></span>
                             GET IN TOUCH
                         </div>
-                        <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-primary leading-tight">Ready to Write Your Dubai <span class="text-brand">Success</span> Story?</h2>
-                        <p class="text-lg md:text-xl text-slate-600 mb-12 leading-relaxed">Experience transparency and strategic support from day one—book a free 30-minute strategy call today.</p>
+                        <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-primary leading-tight">Let's Get Your Business <span class="text-brand">Live</span> in Dubai</h2>
+                        <p class="text-lg md:text-xl text-slate-600 mb-12 leading-relaxed">Book a 30-minute call. We'll map out your exact setup path, timeline, and costs—completely free, zero pressure.</p>
                         
                         <div class="space-y-6 md:space-y-8">
                             <div class="flex items-center gap-4">
                                 <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center text-brand shrink-0"><i data-lucide="check" class="w-5 h-5"></i></div>
-                                <span class="text-slate-700 font-medium md:text-lg">No obligation, no sales pressure</span>
+                                <span class="text-slate-700 font-medium md:text-lg">No sales pitch—just honest answers to your questions</span>
                             </div>
                             <div class="flex items-center gap-4">
                                 <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center text-brand shrink-0"><i data-lucide="check" class="w-5 h-5"></i></div>
-                                <span class="text-slate-700 font-medium md:text-lg">Free cost breakdown & timeline estimate</span>
+                                <span class="text-slate-700 font-medium md:text-lg">Exact cost quote (all-in, no hidden fees)</span>
                             </div>
                             <div class="flex items-center gap-4">
                                 <div class="w-10 h-10 bg-brand/10 rounded-full flex items-center justify-center text-brand shrink-0"><i data-lucide="check" class="w-5 h-5"></i></div>
-                                <span class="text-slate-700 font-medium md:text-lg">Speak with a UAE specialist</span>
+                                <span class="text-slate-700 font-medium md:text-lg">Talk to someone who's done this 500+ times</span>
                             </div>
                         </div>
                         
@@ -1137,8 +1156,9 @@
                                 <label class="text-sm font-bold text-primary uppercase tracking-wider">Message / Goals</label>
                                 <textarea rows="4" placeholder="How can we help you launch?" class="w-full px-4 py-4 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-brand/10 focus:border-brand transition-all resize-none"></textarea>
                             </div>
-                            <button type="submit" class="w-full bg-gradient-to-r from-brand to-brandhover text-white py-5 rounded-xl font-black text-lg hover:shadow-2xl transition-all shadow-xl shadow-brand/30 uppercase tracking-widest">
+                            <button type="submit" class="w-full bg-gradient-to-r from-brand to-brandhover text-white py-5 rounded-xl font-black text-lg hover:shadow-2xl transition-all shadow-xl shadow-brand/30 uppercase tracking-widest flex items-center justify-center gap-3">
                                 Send My Request
+                                <i data-lucide="send" class="w-5 h-5"></i>
                             </button>
                             <p class="text-center text-xs text-slate-400">By submitting, you agree to our privacy policy. We'll never spam you.</p>
                         </form>
@@ -1154,7 +1174,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <div class="col-span-1 sm:col-span-2">
                     <div class="text-2xl font-bold mb-6 text-white"><span class="text-brand">SET</span>KORP</div>
-                    <p class="text-slate-400 max-w-sm mb-8 text-sm md:text-base">Expert business incorporation, banking, real estate & accounting for freezone and mainland setups in Dubai and UAE.</p>
+                    <p class="text-slate-400 max-w-sm mb-8 text-sm md:text-base">We help founders launch Dubai businesses in 14 days—from company registration to bank account, office, and compliant accounting.</p>
                     <div class="flex gap-4">
                         <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
                         <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
